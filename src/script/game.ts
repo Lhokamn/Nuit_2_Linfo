@@ -1,18 +1,19 @@
 
 
 class Game{
-    points:number;
-    spentPointsSidaction:number;
-    spentPointsPasteur:number;
-    spentPointsInsee:number;
-    infected:number;
-    deaths:number;
-    letality:number;
-    transmission:number;
-    data:number;
-    tick:number;
+    points;
+    spentPointsSidaction;
+    spentPointsPasteur;
+    spentPointsInsee;
+    infected;
+    deaths;
+    letality;
+    transmission;
+    data;
+    tick;
+    graphics;
 
-    constructor(){
+    constructor(graphics:Graphics){
         this.points = 0;
         this.spentPointsSidaction = 0;
         this.spentPointsPasteur = 0;
@@ -23,6 +24,7 @@ class Game{
         this.transmission = 1;
         this.data = 0.2;
         this.tick = 0;
+        this.graphics = graphics;
     }
 }
 

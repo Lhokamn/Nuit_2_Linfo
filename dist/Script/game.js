@@ -1,6 +1,6 @@
 "use strict";
 class Game {
-    constructor() {
+    constructor(graphics) {
         this.points = 0;
         this.spentPointsSidaction = 0;
         this.spentPointsPasteur = 0;
@@ -11,6 +11,7 @@ class Game {
         this.transmission = 1;
         this.data = 0.2;
         this.tick = 0;
+        this.graphics = graphics;
     }
 }
 class Graphics {
