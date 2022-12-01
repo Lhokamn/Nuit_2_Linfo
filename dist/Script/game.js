@@ -1,26 +1,35 @@
 "use strict";
-const investSidaction = document.getElementById("sidaction-button");
-const totalPts = document.getElementById("totalpts");
-const sidactionPts = document.getElementById("sidaction-pts");
-const pasteurPts = document.getElementById("pasteur-pts");
-const inseePts = document.getElementById("insee-pts");
-const letalityp = document.getElementById("letality");
-const transmissionp = document.getElementById("transimssion");
-const dataQuality = document.getElementById("data-quality");
-const deathsp = document.getElementById("deaths");
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const logo = document.getElementById("logo-sida");
-let points;
-let spentPointsSidaction;
-let spentPointsPasteur;
-let spentPointsInsee;
-let deaths;
-let letality;
-let transmission;
-let data;
-let rank;
-logo.onload = main;
+class Game {
+    constructor() {
+        this.points = 0;
+        this.spentPointsSidaction = 0;
+        this.spentPointsPasteur = 0;
+        this.spentPointsInsee = 0;
+        this.infected = 0;
+        this.deaths = 0;
+        this.letality = 1;
+        this.transmission = 1;
+        this.data = 0.2;
+        this.tick = 0;
+    }
+}
+class Graphics {
+    constructor() {
+        this.investSidaction = document.getElementById("sidaction-button");
+        this.totalPts = document.getElementById("totalpts");
+        this.sidactionPts = document.getElementById("sidaction-pts");
+        this.pasteurPts = document.getElementById("pasteur-pts");
+        this.inseePts = document.getElementById("insee-pts");
+        this.letalityp = document.getElementById("letality");
+        this.transmissionp = document.getElementById("transimssion");
+        this.dataQuality = document.getElementById("data-quality");
+        this.deathsp = document.getElementById("deaths");
+        this.canvas = document.getElementById("canvas");
+        this.ctx = this.canvas.getContext("2d");
+        this.logo = document.getElementById("logo-sida");
+        this.logo.onload = main;
+    }
+}
 function main() {
 }
 //# sourceMappingURL=game.js.map
