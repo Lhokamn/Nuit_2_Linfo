@@ -8,6 +8,9 @@ const transmissionpù = document.getElementById("transimssion");
 const dataQuality = document.getElementById("data-quality");
 const deathsp = document.getElementById("deaths");
 
+const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
+
 let points:number;
 let spentPointsSidaction:number;
 let spentPointsPasteur:number;
@@ -17,3 +20,4 @@ let letality:number;
 let transmission:number;
 let data:number;
 let rank:number;
+
