@@ -1,8 +1,43 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+}
+
 header {
-    text-align: center;
+    margin: 0px;
+    background-color: aqua;
 }
 
 header img {
     width: 500px;
     height: 200px;
+}
+
+p{
+    margin :0;
+    text-align: center; 
+}
+
+#logo{
+    text-align: left ;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 25px 100px;
+    color: #828282;
+}
+
+footer .titre {
+    text-align: center;
+}
+
+footer .row1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .easteregg {
+    text-align: center;
 }
