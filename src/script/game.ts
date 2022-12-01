@@ -1,7 +1,7 @@
 let points:number;
 let spentPointsSidaction:number;
 let spentPointsPasteur:number;
-let spentPoints3:number;
+let spentPointsInsee:number;
 let casualties:number;
 let letality:number;
 let transmission:number;
