@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 class Game {
     constructor(graphics) {
         this.points = 0;
@@ -10,8 +19,21 @@ class Game {
         this.letality = 1;
         this.transmission = 1;
         this.data = 0.2;
-        this.tick = 0;
+        this.tickCount = 0;
         this.graphics = graphics;
+        this.running = true;
+        this.graphics.logo.onload = this.run;
+    }
+    tick() {
+        return new Promise(resolve => setTimeout(resolve, 1));
+    }
+    run() {
+        return __awaiter(this, void 0, void 0, function* () {
+            while (this.running) {
+                this.graphics.draw();
+                yield this.tick();
+            }
+        });
     }
 }
 class Graphics {
@@ -28,7 +50,10 @@ class Graphics {
         this.canvas = document.getElementById("canvas");
         this.ctx = this.canvas.getContext("2d");
         this.logo = document.getElementById("logo-sida");
-        this.logo.onload = main;
+    }
+    draw() {
+        this.ctx.fillStyle = "white";
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
 function main() {

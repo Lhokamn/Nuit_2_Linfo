@@ -34,11 +34,11 @@
 
     /**
      * let points:number;
-let spentPointsSidaction:number;
-let spentPoints2:number;
-let spentPoints3:number;
-let peopleSaved:number;
-let rank:number;
+      let spentPointsSidaction:number;
+      let spentPoints2:number;
+      let spentPoints3:number;
+      let peopleSaved:number;
+      let rank:number;
      */
     objectStore.createIndex("points",points,{unique:false});
     objectStore.createIndex("spentPointsSidaction",spentPointsSidaction,{unique:false});

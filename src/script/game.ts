@@ -10,8 +10,9 @@ class Game{
     letality;
     transmission;
     data;
-    tick;
+    tickCount;
     graphics;
+    running;
 
     constructor(graphics:Graphics){
         this.points = 0;
@@ -23,8 +24,21 @@ class Game{
         this.letality = 1;
         this.transmission = 1;
         this.data = 0.2;
-        this.tick = 0;
+        this.tickCount = 0;
         this.graphics = graphics;
+        this.running = true;
+        this.graphics.logo.onload = this.run;
+    }
+
+    tick(){
+        return new Promise(resolve => setTimeout(resolve, 1));
+    }
+
+    async run(){
+        while(this.running){
+            this.graphics.draw();
+            await this.tick();
+        }
     }
 }
 
@@ -55,12 +69,14 @@ class Graphics{
         this.dataQuality = document.getElementById("data-quality")
         this.deathsp = document.getElementById("deaths");
         this.canvas = document.getElementById("canvas") as HTMLCanvasElement;
-        this.ctx = this.canvas.getContext("2d");
+        this.ctx = this.canvas.getContext("2d") as CanvasRenderingContext2D;
         this.logo = document.getElementById("logo-sida") as HTMLElement;
-        this.logo.onload=main;
-}
 
-
+    }
+    draw():void{   
+        this.ctx.fillStyle = "white";
+        this.ctx.fillRect(0,0,this.canvas.width,this.canvas.height)
+    }
 }
 
 function main():void{
