@@ -54,7 +54,7 @@ header {
 }
   
 .sidenav a:hover {
-    color: black;
+    color: rgb(224, 64, 64);
 }
   
 .sidenav ul {
@@ -88,8 +88,8 @@ header {
 
 
 header img {
-    width: 100px;
-    height: 100px;
+    width: 4em;
+    height: 3em;
 }
 
 #title{
