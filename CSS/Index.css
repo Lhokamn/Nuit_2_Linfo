@@ -75,7 +75,7 @@ header {
     right: -250px;
     background-color: #e8e8e8;
     padding-top: 60px;
-    transition: left 0.5s ease;
+    transition: right 0.5s ease;
 }
 
 /* Sidenav menu links */
@@ -111,7 +111,7 @@ header {
 
 /* Active class */
 .sidenav.active {
-    left: 0;
+    right: 0;
 }
 
 /* Close btn */
@@ -125,7 +125,7 @@ header {
 .sidenav .close {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: 25px;
     font-size: 36px;
 }
 
