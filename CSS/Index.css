@@ -25,67 +25,66 @@ header {
 
 .grid-container{
     display:grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 5% 6fr 5%;
     grid-auto-rows: minmax(50px,auto);
 }
 
 /* Menu deroulant */
-/* Sidenav menu */
+
 .sidenav {
     height: 100%;
     width: 250px;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: -250px;
+    right: -250px;
     background-color: #e8e8e8;
     padding-top: 60px;
-    transition: left 0.5s ease;
+    transition: right 0.5s ease;
   }
   
   /* Sidenav menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
+.sidenav a {
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
+}
   
-  .sidenav a:hover {
-    color: #111;
-  }
+.sidenav a:hover {
+    color: black;
+}
   
-  .sidenav ul {
+.sidenav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
+}
   
   /* Active class */
-  .sidenav.active {
-    left: 0;
-  }
+.sidenav.active {
+    right: 0;
+}
   
   /* Close btn */
-  .sidenav .close {
+.sidenav .close {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
-  }
+}
   
   /* Icône burger */
-  .burger-icon span {
+.burger-icon span {
     display: block;
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin: 6px 0;
-  }
+}
   
-
 
 
 header img {
@@ -93,9 +92,12 @@ header img {
     height: 100px;
 }
 
-h1{
+#title{
     margin :0;
+    color: rgb(255, 255, 255);
     text-align: center; 
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 #logo{
@@ -140,7 +142,7 @@ footer .easteregg {
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     color: white;
-    background: #6225E6;
+    background: lightcoral;
     transition: 1s;
     box-shadow: 6px 6px 0 black;
     transform: skewX(-15deg);
@@ -152,7 +154,7 @@ footer .easteregg {
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 #FBC638;
+    box-shadow: 10px 10px 0 rgb(224, 64, 64);
 }
 
 .cta span:nth-child(2) {
@@ -162,7 +164,7 @@ footer .easteregg {
 
 .cta:hover span:nth-child(2) {
     transition: 0.5s;
-    margin-right: 45px;
+    margin-right: 0px;
 }
 
 span {
@@ -170,11 +172,15 @@ span {
 }
 
 span:nth-child(2) {
-    width: 20px;
-    margin-left: 30px;
     position: relative;
-    top: 12%;
+    top: 8%;
 }
+
+span:nth-child(3) {
+    position: relative;
+    top: 16%;
+}
+
 
 /**************SVG****************/
 
@@ -210,7 +216,7 @@ path.two {
     }
 
     50% {
-        fill: #FBC638;
+        fill: rgb(224, 64, 64);
     }
 
     100% {
