@@ -19,7 +19,8 @@ body .wrapper {
 }
 
 header {
-    text-align: center;
+    margin: 0px;
+    background-color: aqua;
 }
 
 header img {
@@ -27,6 +28,14 @@ header img {
     height: 200px;
 }
 
+p{
+    margin :0;
+    text-align: center; 
+}
+
+#logo{
+    text-align: left ;
+}
 
 footer {
     background-color: #1a1a1a;
