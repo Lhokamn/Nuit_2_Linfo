@@ -1,13 +1,16 @@
 body{
     height:100vh;
     width: 100vw;
-    background-color: black;
+    background: linear-gradient(180deg,white,darkgrey );
     margin:0px;
-    color:white;
+    color:black;
+    display: grid;
+    grid-template-rows: 1fr 20fr;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
-    border-bottom: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(0,0,0,0.2);
     height: fit-content;
     padding: 5px;
     padding-left: 2px;
@@ -16,15 +19,18 @@ header{
     grid-template-columns: 1fr 20fr 1fr;
     place-items: center;
     align-items: center;
+    background: linear-gradient(45deg, crimson,red);
+    color:white;
 }
 
-header div a{
-    color :white;
+header a{
+    color:white;
 }
 
 header p{
     margin:0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 #home{
@@ -32,7 +38,88 @@ header p{
     
 }
 
-
 #home a{
     justify-content: left;
+}
+
+#game{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-section{
+    margin:5px;
+    padding: 5px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+#canvas{
+    aspect-ratio: 1/1;
+    width: fit-content;
+}
+
+.invest{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    place-items: center;
+    justify-content: center;
+    padding-bottom:5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.description{
+    margin-left: 5px;
+}
+
+.description a {
+    color:blue;
+}
+
+.description b{
+    color:crimson;
+    font-style: italic;
+}
+
+.invest button{
+    background: linear-gradient(45deg);
+    width: fit-content;
+    aspect-ratio: 16/9;
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0.2);
+    color :white;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+#research h1{
+    border-bottom: solid 2px rgba(0,0,0,0.2);
+    width: fit-content;
+}
+
+#sidaction, #pasteur{
+    border-bottom:solid 2px rgba(0,0,0,0.2);
+    width: fit-content;
+}
+
+.img-orga{
+    aspect-ratio:initial;
+    height: 100px;
+}
+
+.invest button{
+    background: linear-gradient(45deg, lightcoral, rgb(187, 0, 53));
+}
+
+.hidden{
+    display: none;
 }
