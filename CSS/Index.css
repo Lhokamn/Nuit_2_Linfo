@@ -291,3 +291,11 @@ path.two {
         fill: white;
     }
 }
+
+.easteregg {
+    color: #1a1a1a
+}
+
+.easteregg:hover {
+    color: yellow
+}
