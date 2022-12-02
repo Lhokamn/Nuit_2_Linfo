@@ -69,7 +69,6 @@
     console.log('idQuery',idQuery.result);
   };
 
-
   //Fermeture de la connextion
   transaction.oncomplete =function(){
     db.close();
