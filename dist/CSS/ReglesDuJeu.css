@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.regle {
+    text-align: center;
+}
+
+header {
+    margin: 0px;
+    background-color: lightcoral;
+}
+
+header img {
+    width: 4em;
+    height: 3em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 5% 6fr 5%;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+#title {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#logo {
+    text-align: left;
+}
+
+/* MENU DEROULANT */
+
+.sidenav {
+    opacity: 0.95;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 60px;
+    transition: right 0.5s ease;
+    border: #111;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.sidenav ul {
+    text-decoration: underline;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    transition: right 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #111;
+}
+
+
+.sidenav a:hover {
+    color: rgb(224, 64, 64);
+}
+
+.sidenav ul {
+    opacity: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+    right: 0;
+}
+
+/* Close btn */
+
+/* Active class */
+.sidenav.active {
+    right: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+}
