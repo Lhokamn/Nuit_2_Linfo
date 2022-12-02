@@ -46,7 +46,7 @@ header img {
     z-index: 1;
     top: 0;
     right: -250px;
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     padding-top: 60px;
     transition: right 0.5s ease;
     border: #111;
@@ -54,8 +54,9 @@ header img {
     border-width: 2px;
 }
 
-
-
+.sidenav ul{
+    text-decoration: underline;
+}
 
 /* Sidenav menu links */
 .sidenav a {
