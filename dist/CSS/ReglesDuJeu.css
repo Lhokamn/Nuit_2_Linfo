@@ -2,6 +2,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.regle {
+    text-align: center;
+}
+
 header {
     margin: 0px;
     background-color: lightcoral;
@@ -54,7 +58,7 @@ header img {
     border-width: 2px;
 }
 
-.sidenav ul{
+.sidenav ul {
     text-decoration: underline;
 }
 
